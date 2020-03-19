@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Added a link to our external stylesheet-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <a href="#" id="viewHighschore">View Highscores</a>
+    <div id="timesUpDiv">
+        <p hidden>-3 seconds!</p>
+    </div>
+    <p class="timer">Time: <span id="timerDisplay"></span></p>
+    <p class="score">Score: <span id="scoreDisplay"></span></p>
+    <div id="mainSection">
+        <div id="startScreen" style="display:block">
+            <h1>Code Quiz</h1>
+            <p>You have 30 seconds to complete the quiz. Click "Start Quiz" to begin.</p>
+                <button type="button" class="btn btn-primary" id="startButton">Start Quiz</button>
+        </div>
+
+    </div>
+
+    <div id="questions"  style="display: none;">
+        <h2 id="questionTitle"></h2>
+            <div id="answerChoices">
+                
+            </div>
+    </div>
+
+    <div id="feedback"  style="display: none;">
+        <p id ="solution"></p>
+    </div>
+
+    <div id="nextQuestion">
+        <button id="nextButton" type="button" class="btn btn-secondary"  style="display: none;">Next</button>
+    </div>
+
+    <div id="doneScreen"  style="display: none;">
+        <h3>All done!</h3>
+        <p class="score">Final Score: <span id="scoreCounter"></span></p>
+        <p>Enter your username: </p><br>
+        <div class="input-group mb-3">
+            <input id="userInitials" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            <input type="submit" id="initialBtn" class = "btn btn-success">
+          </div>
+    </div>
+
+    <div id="highscoreScreen"  style="display: none;">
+        <h3>Highscores</h3>
+        <p id = "highscoresResults"></p><br><br>
+        <input type="submit" id="goBackbtn" value="Go Back" onClick="javascript:history.go(-1)" class = "btn btn-secondary">
+        <input type="submit" id="clearScoreBtn" value="Clear Highcores" class = "btn btn-secondary">
+    </div>
+
+
+
+<script src="./questions.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
